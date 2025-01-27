@@ -15,7 +15,10 @@ void main(){
   print("Le surface totale du pavé droit est : $surfaceTotalePave");
 
   double surfaceBasePave = calculSurfaceBasePave(longueur, largeur);
-   print("La surface de la base du pavé droit est : $surfaceBasePave");
+  print("La surface de la base du pavé droit est : $surfaceBasePave");
+
+   double PerimetreBasePave = calculPerimetreBasePave(longueur, largeur);
+   print("La surface de la base du pavé droit est : $PerimetreBasePave");
 }  
 
 // fonction pour le volume du pave droit
@@ -33,4 +36,8 @@ double calculSurfaceTotalePave(double longueur, double largeur, double hauteur){
 double  calculSurfaceBasePave(double longueur, double largeur) {
   return longueur*largeur;
 }
+// calcul perimetre de base du pave droit
 
+double calculPerimetreBasePave(double longueur, double largeur){
+  return longueur+largeur;
+}
