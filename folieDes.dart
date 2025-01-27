@@ -13,16 +13,12 @@ void main(){
   for(int i=1;i<=nombreDeLancers;i++){
     print("Le lancer numero $i est de ${lancerDeMultiple(nombreDeLancers)}");
   }
-  
- 
-  /*int vosLancers = lancerDeMultiple(nombreDeLancers);
-  print(vosLancers);*/
 
-  
+  lancerDeAvecConditions(nombreDeLancers);
+
 }
 
 int lancerDe(){
-  //int resultat = Random(1,6);
   int  intValue = Random().nextInt(6)+1; 
   return intValue;
 }
@@ -33,5 +29,20 @@ int lancerDeMultiple(int nombreDeLancers){
     return resultat;
   }
   return resultat;
+}
+
+void lancerDeAvecConditions(int nombreDeLancers){
+  
+  int compteur = 0;
+  while(compteur < nombreDeLancers){
+    int nombreAleatoire = lancerDe();
+    if(nombreAleatoire < 3){
+      //la fonction ne faire rien
+    }else{
+      print(nombreAleatoire);
+      compteur++;
+    }
+  }
+  
 
 }
