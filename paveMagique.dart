@@ -11,8 +11,19 @@ void main(){
   double volumePave = calculVolumePave(longueur, largeur, hauteur);
 
   print("Le volume du pavé droit est : $volumePave");
+
+  double surfaceTotalePave = calculSurfaceTotalePave(longueur, largeur, hauteur);
+
+  print("Le surface totale du pavé droit est : $surfaceTotalePave");
 }  
 
+// fonction pour le volume du pave droit
 double calculVolumePave(double longueur, double largeur, double hauteur){
   return longueur*largeur*hauteur;
+}
+
+// calcul de la surface totale du pave droit
+
+double calculSurfaceTotalePave(double longueur, double largeur, double hauteur){
+  return  2*longueur*largeur + 2*longueur*hauteur + 2*largeur*hauteur;
 }
